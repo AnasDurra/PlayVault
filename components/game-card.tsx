@@ -41,7 +41,7 @@ export function GameCard({
 
   if (compact) {
     return (
-      <Link href={`/games/${game.id}`}>
+      <Link href={`/games/${game.id}`} prefetch={false}>
         <div className="group flex gap-3 rounded-lg p-2 transition-all duration-200 hover-elevate active-elevate-2 cursor-pointer">
           <div className="relative h-16 w-24 shrink-0 overflow-hidden rounded-md bg-muted">
             {!imageLoaded && (
