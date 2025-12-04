@@ -1,36 +1,110 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# **PlayVault — Game Hosting Website**
 
-## Getting Started
+## **Project Overview**
 
-First, run the development server:
+PlayVault is a web-based game hosting platform where users can browse, search, and play games embedded from GameDistribution.com. The platform features interactive game cards, search, filtering, dark/light mode, and user interaction features like favorites and recently played games.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## **Features Implemented**
+
+- **Game Browsing**: Displays all available games in a grid layout with thumbnails, titles, descriptions, and a play button.
+- **Search Functionality**: Search for games by title in real-time with a message if no results are found.
+- **Game Filtering**: Filter games by categories like Action, Puzzle, and Arcade, with the ability to select multiple categories.
+- **Game Details**: View detailed information about a game, including its title, description, category, and embedded gameplay (via iframe).
+- **Fullscreen Mode**: Support for fullscreen mode on game pages.
+- **Dark/Light Mode Toggle**: Users can switch between dark and light themes, with preference saved to localStorage.
+- **Favorites**: Users can mark games as favorites, which are stored in localStorage.
+- **Recently Played Games**: Tracks games that users have played recently and stores them in localStorage.
+- **Responsive Design**: The app adapts to both mobile and desktop screens, ensuring a good user experience on all devices.
+
+## **Tech Stack**
+
+- **Next.js** (Framework)
+- **React.js** (Frontend)
+- **TypeScript** (For type safety)
+- **Tailwind CSS** (Styling)
+- **Zustand** (State management)
+- **Lucide-React** (Icons)
+- **Next/Image** (For image optimization)
+
+## **Installation and Setup**
+
+1. **Clone the repository**:
+
+   ```bash
+   git clone https://github.com/yourusername/playvault.git
+   cd playvault
+   ```
+
+2. **Install dependencies**:
+
+   ```bash
+   npm install
+   ```
+
+3. **Run the development server**:
+
+   ```bash
+   npm run dev
+   ```
+
+4. **Open the app**:
+   - Visit `http://localhost:3000` in your browser.
+
+## **Folder Structure**
+
+```
+playvault/
+├── components/
+│   ├── button.tsx
+│   ├── footer.tsx
+│   ├── game-card.tsx
+│   ├── game-player.tsx
+│   ├── header.tsx
+│   └── search.tsx
+├── lib/
+│   ├── game-store.ts (Manages game data and state)
+│   ├── games.ts (Holds mock data for games)
+├── pages/
+│   ├── index.tsx (Home page displaying all games)
+│   ├── games/[id].tsx (Game detail page)
+├── public/
+│   └── assets/
+├── styles/
+│   └── globals.css
+└── utils/
+    └── theme.ts (Handles theme switching)
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## **Known Limitations**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Storage**: The favorites and recently played games are stored in `localStorage` and are not synchronized across devices.
+- **Missing Features**: Some advanced features, such as game ratings and reviews, were not implemented due to time constraints.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## **Bonus Features Implemented**
 
-## Learn More
+- **Dark Mode Toggle**
+- **Favorite Games (Stored in localStorage)**
+- **Recently Played Games (Stored in localStorage)**
+- **Share Game Functionality**
 
-To learn more about Next.js, take a look at the following resources:
+## **Challenges Faced**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- I worked under a tight deadline, so while I implemented most core features, some bonus features like game ratings/reviews and smoother error handling could not be included.
+- Managing the `localStorage` for favorites and recently played games added complexity, but it was essential for user experience persistence.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## **What I'd Improve With More Time**
 
-## Deploy on Vercel
+- **Optimizations**: I’d optimize iframe embedding and error handling.
+- **Additional Features**: Implement game reviews and ratings, and integrate a sidebar for game categories.
+- **Testing**: I would add unit tests and integration tests, especially for dynamic features like search and filtering.
+- **Performance**: Implement lazy loading for images and possibly games, to reduce the initial loading time.
+- **UI/UX**: Improve the overall user experience, especially for mobile views, and polish transitions and animations.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## **Live Demo**
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- You can view a live demo at: [Demo URL if deployed]
+
+## **Resources Used**
+
+- **GameDistribution.com**: [Game Distribution Link](https://gamedistribution.com/)
+- Used iframe embedding for game integration.
