@@ -41,7 +41,7 @@ export function GameCard({
 
   if (compact) {
     return (
-      <Link href={`/games/${game.id}`} prefetch={false}>
+      <Link href={`/games/${game.id}`}>
         <div className="group flex gap-3 rounded-lg p-2 transition-all duration-200 hover-elevate active-elevate-2 cursor-pointer">
           <div className="relative h-16 w-24 shrink-0 overflow-hidden rounded-md bg-muted">
             {!imageLoaded && (
@@ -78,7 +78,7 @@ export function GameCard({
   }
 
   return (
-    <Link href={`/games/${game.id}`} prefetch={false}>
+    <Link href={`/games/${game.id}`}>
       <div
         className={`group relative overflow-hidden rounded-lg bg-card transition-all duration-300 cursor-pointer ${
           featured ? "aspect-video" : "aspect-16/10"
