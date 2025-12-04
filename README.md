@@ -31,7 +31,7 @@ PlayVault is a web-based game hosting platform where users can browse, search, a
 1. **Clone the repository**:
 
    ```bash
-   git clone https://github.com/yourusername/playvault.git
+   git clone https://github.com/AnasDurra/PlayVault.git
    cd playvault
    ```
 
