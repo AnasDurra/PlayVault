@@ -78,7 +78,7 @@ export function GameCard({
   }
 
   return (
-    <Link href={`/games/${game.id}`}>
+    <Link href={`/games/${game.id}`} prefetch={false}>
       <div
         className={`group relative overflow-hidden rounded-lg bg-card transition-all duration-300 cursor-pointer ${
           featured ? "aspect-video" : "aspect-16/10"
