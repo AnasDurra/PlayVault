@@ -54,19 +54,34 @@ PlayVault is a web-based game hosting platform where users can browse, search, a
 
 ```
 playvault/
+├── app/
+│   ├── favorites/
+│   ├── games/
+│   ├── recently-played/
+│   ├── globals.css
+│   ├── layout.tsx
+│   ├── not-found.tsx
+│   ├── page.tsx
+│   ├── providers.tsx
 ├── components/
-│   ├── button.tsx
-│   ├── footer.tsx
-│   ├── game-card.tsx
-│   ├── game-player.tsx
-│   ├── header.tsx
-│   └── search.tsx
+│   ├── ui/
+│   │   ├── category-filter.tsx
+│   │   ├── footer.tsx
+│   │   ├── game-card.tsx
+│   │   ├── game-grid.tsx
+│   │   ├── game-player.tsx
+│   │   ├── header.tsx
+│   │   ├── hero-section.tsx
+│   │   ├── related-games.tsx
+│   │   ├── search-bar.tsx
+├── hooks/
+│   ├── use-toast.ts
 ├── lib/
 │   ├── game-store.ts (Manages game data and state)
 │   ├── games.ts (Holds mock data for games)
-├── pages/
-│   ├── index.tsx (Home page displaying all games)
-│   ├── games/[id].tsx (Game detail page)
+│   ├── schema.ts
+│   ├── theme-provider.tsx
+│   ├── utils.ts
 ├── public/
 │   └── assets/
 ├── styles/
@@ -90,7 +105,6 @@ playvault/
 ## **Challenges Faced**
 
 - I worked under a tight deadline, so while I implemented most core features, some bonus features like game ratings/reviews and smoother error handling could not be included.
-- Managing the `localStorage` for favorites and recently played games added complexity, but it was essential for user experience persistence.
 
 ## **What I'd Improve With More Time**
 
@@ -102,9 +116,9 @@ playvault/
 
 ## **Live Demo**
 
-- You can view a live demo at: [Demo URL if deployed]
+- You can view a live demo at: https://play-vault-sepia.vercel.app/
 
 ## **Resources Used**
 
-- **GameDistribution.com**: [Game Distribution Link](https://gamedistribution.com/)
+- **GameDistribution.com**: https://gamedistribution.com/
 - Used iframe embedding for game integration.
