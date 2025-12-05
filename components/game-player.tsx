@@ -125,6 +125,7 @@ export function GamePlayer({ game }: GamePlayerProps) {
         allowFullScreen
         onLoad={handleLoad}
         onError={handleError}
+        sandbox="allow-scripts allow-same-origin allow-popups allow-forms"
       />
       <div className="absolute top-1 left-3">
         <Button
